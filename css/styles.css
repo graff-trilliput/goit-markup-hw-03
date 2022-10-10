@@ -8,6 +8,7 @@
   --text-color-dark: #000000;
   --color-black: #212121;
   --gray-border: #ececec;
+  --gray-border: #eeeeee;
 }
 
 /* 
@@ -338,9 +339,16 @@ body {
 }
 
 .filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .filter-item {
+  margin-bottom: 50px;
+}
+.filter-item:not(:first-child) {
+  margin-left: 8px;
 }
 
 .filter-btn:hover,
@@ -350,13 +358,18 @@ body {
 }
 
 .filter-btn {
+  padding: 6px 22px;
+
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
+
   background-color: var(--gray-bg);
   cursor: pointer;
+  border-radius: 4px;
+  border: transparent;
 }
 
 /* project example section on portfolio */
@@ -367,15 +380,29 @@ body {
 }
 
 .project-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
 .project-item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.project-item-context-wrapper {
+  padding: 20px 24px;
+  border: 1px solid var(--gray-border);
+  border-top: transparent;
 }
 
 .project-subtitle {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
+
+  margin-bottom: 4px;
 }
 
 .project-text {
